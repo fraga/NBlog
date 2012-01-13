@@ -1,0 +1,1 @@
+﻿This is NBLog's default humans.txt file, please change it.
