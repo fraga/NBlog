@@ -41,16 +41,14 @@ namespace NBlog.Tests
         [TearDown]
         public void TestCleanup()
         {
-            var repositoryType = Instance.GetType();
-
-            if (repositoryType == typeof(JsonRepository))
+            if (Instance is JsonRepository)
             {
                 if (Directory.Exists(JsonWorkingFolder))
                 {
                     Directory.Delete(JsonWorkingFolder, recursive: true);
                 }
             }
-            else if (repositoryType == typeof(SqlRepository))
+            else if (Instance is SqlRepository)
             {
                 using (var cnn = new SqlConnection(SqlConnectionString))
                 using (var cmd = new SqlCommand("EXEC sp_MSforeachtable @command1 = 'TRUNCATE TABLE ?'", cnn))
@@ -60,7 +58,7 @@ namespace NBlog.Tests
                     cmd.ExecuteNonQuery();
                 }
             }
-            else if (repositoryType == typeof(MongoRepository))
+            else if (Instance is MongoRepository)
             {
                 var server = MongoServer.Create(MongoConnectionString);
                 server.DropDatabase(MongoDatabaseName);
@@ -71,7 +69,7 @@ namespace NBlog.Tests
         [FixtureTearDown]
         public void FixtureTearDown()
         {
-            if (Instance.GetType() == typeof(SqlRepository))
+            if (Instance is SqlRepository)
             {
                 const string dropSql = @"
                     ALTER DATABASE [{0}] SET SINGLE_USER WITH ROLLBACK IMMEDIATE

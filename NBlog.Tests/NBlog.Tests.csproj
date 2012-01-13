@@ -32,17 +32,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Gallio">
+    <Reference Include="Gallio, Version=3.3.0.0, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\NBlog.Lib\Gallio\Gallio.dll</HintPath>
     </Reference>
-    <Reference Include="Gallio35">
-      <HintPath>..\NBlog.Lib\Gallio\Gallio35.dll</HintPath>
+    <Reference Include="Gallio40, Version=3.3.0.0, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NBlog.Lib\Gallio\Gallio40.dll</HintPath>
     </Reference>
-    <Reference Include="MbUnit">
+    <Reference Include="MbUnit, Version=3.3.0.0, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\NBlog.Lib\Gallio\MbUnit.dll</HintPath>
     </Reference>
-    <Reference Include="MbUnit35">
-      <HintPath>..\NBlog.Lib\Gallio\MbUnit35.dll</HintPath>
+    <Reference Include="MbUnit40, Version=3.3.0.0, Culture=neutral, PublicKeyToken=eb9cfa67ee6ab36e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\NBlog.Lib\Gallio\MbUnit40.dll</HintPath>
     </Reference>
     <Reference Include="MongoDB.Driver">
       <HintPath>..\NBlog.Lib\MongoDB.Driver.dll</HintPath>

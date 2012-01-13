@@ -55,9 +55,9 @@
     <Content Include="Elmah.dll" />
     <Content Include="Elmah.xml" />
     <Content Include="Gallio\Gallio.dll" />
-    <Content Include="Gallio\Gallio35.dll" />
+    <Content Include="Gallio\Gallio40.dll" />
     <Content Include="Gallio\MbUnit.dll" />
-    <Content Include="Gallio\MbUnit35.dll" />
+    <Content Include="Gallio\MbUnit40.dll" />
     <Content Include="HtmlSanitizationLibrary.dll" />
     <Content Include="HtmlSanitizationLibrary.xml" />
     <Content Include="Ionic.Zip.dll" />
@@ -82,6 +82,7 @@
     <Content Include="SquishIt\SquishIt.Mvc.dll" />
     <Content Include="SquishIt\Yahoo.Yui.Compressor.dll" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
