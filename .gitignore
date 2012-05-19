@@ -50,3 +50,8 @@ _ReSharper*/
 
 # Office Temp Files
 ~$*
+
+#ncrunch
+*.ncrunch
+*.ncrunchproject
+*.ncrunchsolution

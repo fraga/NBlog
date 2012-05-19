@@ -12,21 +12,15 @@ namespace NBlog.Web.Application.Storage.Json
     {
         private readonly RepositoryKeys _keys;
         private readonly HttpTenantSelector _tenantSelector;
+        public string DataPath { get; set; }
 
 
-        public string DataPath
-        {
-            get
-            {
-                return HttpContext.Current.Server.MapPath("~/App_Data/" + _tenantSelector.Name);
-            }
-        }
-
-
-        public JsonRepository(RepositoryKeys keys, HttpTenantSelector tenantSelector)
+        public JsonRepository(RepositoryKeys keys, HttpTenantSelector tenantSelector, string dataPath = null)
         {
             _keys = keys;
             _tenantSelector = tenantSelector;
+            if (dataPath != null)
+                DataPath = dataPath;
         }
 
 

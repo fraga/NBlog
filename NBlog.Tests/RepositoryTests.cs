@@ -45,7 +45,7 @@ namespace NBlog.Tests
             {
                 if (Directory.Exists(JsonWorkingFolder))
                 {
-                    Directory.Delete(JsonWorkingFolder, recursive: true);
+                    Directory.Delete(JsonWorkingFolder, true);
                 }
             }
             else if (Instance is SqlRepository)
@@ -99,7 +99,7 @@ namespace NBlog.Tests
 
         private static JsonRepository BuildJsonRepository()
         {
-            return new JsonRepository(Keys, new HttpTenantSelector());
+            return new JsonRepository(Keys, new HttpTenantSelector(), JsonWorkingFolder);
         }
 
 
@@ -152,6 +152,7 @@ namespace NBlog.Tests
         {
             // arrange
             var repository = Instance;
+
             repository.Save(new Entry { Slug = "entry-1", Title = "Entry 1", DateCreated = DateTime.Now });
             repository.Save(new Entry { Slug = "entry-2", Title = "Entry 2", DateCreated = DateTime.Now });
             repository.Save(new Entry { Slug = "entry-3", Title = "Entry 3", DateCreated = DateTime.Now });
